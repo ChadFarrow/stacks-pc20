@@ -47,6 +47,12 @@ export default tseslint.config(
     },
   },
   {
+    files: ["src/lib/rssParser.ts"],
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+  {
     files: ["**/*.html"],
     plugins: {
       "@html-eslint": htmlEslint,

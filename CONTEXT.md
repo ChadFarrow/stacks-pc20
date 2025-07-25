@@ -1,6 +1,6 @@
 # Project Overview
 
-This project is a Nostr client application built with React 18.x, TailwindCSS 3.x, Vite, shadcn/ui, and Nostrify.
+This project is a Podcasting 2.0 starter template built with React 18.x, TailwindCSS 3.x, Vite, shadcn/ui, and the Podcast Index API.
 
 ## Technology Stack
 
@@ -8,29 +8,27 @@ This project is a Nostr client application built with React 18.x, TailwindCSS 3.
 - **TailwindCSS 3.x**: Utility-first CSS framework for styling
 - **Vite**: Fast build tool and development server
 - **shadcn/ui**: Unstyled, accessible UI components built with Radix UI and Tailwind
-- **Nostrify**: Nostr protocol framework for Deno and web
+- **Podcast Index API**: For podcast discovery and metadata
+- **RSS Parser**: For parsing podcast feeds with PC 2.0 namespace support
 - **React Router**: For client-side routing with BrowserRouter and ScrollToTop functionality
 - **TanStack Query**: For data fetching, caching, and state management
 - **TypeScript**: For type-safe JavaScript development
 
 ## Project Structure
 
-- `/src/components/`: UI components including NostrProvider for Nostr integration
+- `/src/components/`: UI components including podcast-specific components
   - `/src/components/ui/`: shadcn/ui components (48+ components available)
-  - `/src/components/auth/`: Authentication-related components (LoginArea, LoginDialog, etc.)
+  - `/src/components/podcast/`: Podcast-specific components (PodcastCard, EpisodeCard, PodcastSearch)
 - `/src/hooks/`: Custom hooks including:
-  - `useNostr`: Core Nostr protocol integration
-  - `useAuthor`: Fetch user profile data by pubkey
-  - `useCurrentUser`: Get currently logged-in user
-  - `useNostrPublish`: Publish events to Nostr
-  - `useUploadFile`: Upload files via Blossom servers
-  - `useAppContext`: Access global app configuration
-  - `useTheme`: Theme management
+  - `usePodcastIndex`: Podcast Index API integration with React Query
+  - `useTheme`: Theme management with next-themes
   - `useToast`: Toast notifications
   - `useLocalStorage`: Persistent local storage
-  - `useLoggedInAccounts`: Manage multiple accounts
-  - `useLoginActions`: Authentication actions
   - `useIsMobile`: Responsive design helper
+- `/src/lib/`: Core utilities and API clients
+  - `podcastIndex.ts`: Podcast Index API client
+  - `rssParser.ts`: RSS parser with PC 2.0 namespace support
+  - `pc20-types.ts`: TypeScript types for all PC 2.0 features
 - `/src/pages/`: Page components used by React Router (Index, NotFound)
 - `/src/lib/`: Utility functions and shared logic
 - `/src/contexts/`: React context providers (AppContext)

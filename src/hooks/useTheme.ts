@@ -1,20 +1,14 @@
-import { type Theme } from "@/contexts/AppContext";
-import { useAppContext } from "@/hooks/useAppContext";
+import { useTheme as useNextTheme } from 'next-themes';
 
 /**
  * Hook to get and set the active theme
  * @returns Theme context with theme and setTheme
  */
-export function useTheme(): { theme: Theme; setTheme: (theme: Theme) => void } {
-  const { config, updateConfig } = useAppContext();
+export function useTheme() {
+  const { theme, setTheme } = useNextTheme();
 
   return {
-    theme: config.theme,
-    setTheme: (theme: Theme) => {
-      updateConfig((currentConfig) => ({
-        ...currentConfig,
-        theme,
-      }));
-    }
-  }
+    theme: theme as 'light' | 'dark' | 'system',
+    setTheme,
+  };
 }
