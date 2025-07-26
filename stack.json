@@ -2,7 +2,7 @@
   "name": "pc20-starter",
   "title": "PC 2.0 Starter",
   "description": "Build modern podcast applications with Podcasting 2.0 features like Value4Value, chapters, and transcripts",
-  "uri": "git+https://github.com/your-username/pc20-starter.git",
+  "uri": "git+https://github.com/ChadFarrow/stacks-PC20.git",
   "image": "https://podcastindex.org/images/podcastindex-logo.png",
   "commands": [
     "npm",

@@ -1,7 +1,7 @@
 {
   "name": "pc20-starter",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "description": "A starter template for building Podcasting 2.0 applications with modern web technologies",
   "keywords": [
@@ -11,8 +11,20 @@
     "rss",
     "audio",
     "react",
-    "typescript"
+    "typescript",
+    "template",
+    "starter",
+    "value4value"
   ],
+  "author": "Chad Farrow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChadFarrow/stacks-PC20.git"
+  },
+  "homepage": "https://github.com/ChadFarrow/stacks-PC20",
+  "bugs": {
+    "url": "https://github.com/ChadFarrow/stacks-PC20/issues"
+  },
   "scripts": {
     "dev": "npm i && vite",
     "build": "npm i && vite build && cp dist/index.html dist/404.html",
